@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 26, 26, 26;
+  --background-end-rgb: 45, 45, 45;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
+
+@layer components {
+  .nav-link {
+    @apply px-4 py-2 rounded-lg hover:bg-secondary transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-dark text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+  }
+} 
